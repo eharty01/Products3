@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Cozy Corner Bookstore</h2>
+
+    <div class="result">
+        <p id="product-display"></p>
+    </div>
+
+    <script>
+
+        /* get JSON data */
+        $.getJSON('products.json', function(data) {
+            const productsHTML = data.products;
+            let booksForSale = "";
+            
+            /* loop through it categorizing each item for CSS */
+            for (let i = 0; i < productsHTML.length; i++) {
+                booksForSale += 
+                    '<div class="product-box">' +
+                        '<h3>' + productsHTML[i].name + '</h3>' +
+                        '<p class=description>' + productsHTML[i].description + '</p>' +
+                        '<p class="pricing">' + "Price: " + productsHTML[i].price + '</p>' +
+                        '<p class="categories">' + "Categories: " + '<br>' + productsHTML[i].categories + '</p>' +
+                    '</div>'; 
+            }
+
+            document.getElementById("product-display").innerHTML = booksForSale;
+        })
+    </script>
+</body>
+</html>
