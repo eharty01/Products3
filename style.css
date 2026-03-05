@@ -1,0 +1,54 @@
+header {
+    position: fixed;
+    width: 100%;
+}
+
+h2 {
+  color: lightgoldenrodyellow;
+  text-decoration: underline;
+}
+
+body {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    background-position: center;
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/044/280/984/small/stack-of-books-on-a-brown-background-concept-for-world-book-day-photo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+body img {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    width: 100px;
+    padding: 10px;
+}
+
+#product-display {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product-box {
+  border: solid, 3px, white;
+  color: white;
+  border-radius: 5px;
+  max-width: 300px;
+  padding: 10px;
+}
+
+.product-box:hover {
+  border: solid, 3px, grey;
+  cursor: pointer;
+}
+
+.product-box h3 {
+  color: orange;
+}
