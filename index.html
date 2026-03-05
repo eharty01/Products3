@@ -6,21 +6,24 @@
 </head>
 
 <body>
-    <h2>Cozy Corner Bookstore</h2>
-
-    <div class="result">
-        <p id="product-display"></p>
-    </div>
-
     <script>
+        let accessibleProducts = [];
 
         /* get JSON data */
         $.getJSON('products.json', function(data) {
             const productsHTML = data.products;
+            accessibleProducts = productsHTML;
+
             let booksForSale = "";
+
+            const catSet = new Set();
             
             /* loop through it categorizing each item for CSS */
             for (let i = 0; i < productsHTML.length; i++) {
+                for (let j = 0; j < productsHTML[i].categories.length; j++) {
+                    catSet.add(productsHTML[i].categories[j]);
+                }
+
                 booksForSale += 
                     '<div class="product-box">' +
                         '<h3>' + productsHTML[i].name + '</h3>' +
@@ -30,8 +33,48 @@
                     '</div>'; 
             }
 
+            let filterOptions = "<option value=''>" + "Select a filter" + "</option>";
+            filterOptions += "<option value=''>" + "All" + "</option>";
+
+            catSet.forEach(category => {
+                filterOptions += "<option value='" + category + "'>" + category + "</option>";
+            });
+
+            document.getElementById("selectFilter").innerHTML = filterOptions;
             document.getElementById("product-display").innerHTML = booksForSale;
         })
+
+        function filterFunction() {
+            const filter = document.getElementById("selectFilter").value;
+            let matches = "";
+
+            for (let i = 0; i < accessibleProducts.length; i++) {
+                if (accessibleProducts[i].categories.indexOf(filter) !== -1) {
+                    matches += "| " + accessibleProducts[i].name + " |";
+                }
+            }
+
+            if (filter == "all" || filter == "") {
+                matches += "Select a specific filter to see your matches."
+            }
+
+            document.getElementById("filteredMatches").innerHTML = matches;
+        }
     </script>
+
+    <header>
+        <h2>Cozy Corner Bookstore</h2>
+
+        <select id="selectFilter">
+            <option>Select a category</option>
+        </select>
+
+        <button onclick="filterFunction()">Filter</button>
+    </header>
+
+    <p>Your filtered matches: </p>
+    <div id="filteredMatches"></div>
+
+    <div id="product-display"></div>
 </body>
 </html>
