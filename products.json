@@ -1,14 +1,14 @@
 {
     "products": [
-                {"name": "Jane Eyre", "description": "Charlotte Brontë's classic debut novel.", "price": "$18", "categories": ["classics", " hard-cover", " english-language"]},
-                {"name": "Anna Karenina", "description": "Tolstoy's most famous work.", "price": "$20", "categories": ["classics", " hard-cover", " russian-language"]},
-                {"name": "The Hunger Games", "description": "Suzanne Collins' flagship series.", "price": "$16", "categories": ["young-adult", " paperback", " english-language"]},
-                {"name": "The Very Hungry Caterpillar", "description": "Beloved children's picture book.", "price": "$12", "categories": ["children", " hard-cover", " english-language"]},
-                {"name": "1984", "description": "George Orwell's image of a dystopian world.", "price": "$17", "categories": ["classics", " paper-back", " english-language"]},
-                {"name": "The Little Prince", "description": "A classic French children's book.", "price": "$11", "categories": ["children", " hard-cover", " french-language"]},
-                {"name": "Madame Bovary", "description": "Flaubert's controversial break out novel.", "price": "$20", "categories": ["classics", " paper-back", " french-language"]},
-                {"name": "Don Quijote", "description": "Cervantes' most acclaimed work.", "price": "$22", "categories": ["classics", " hard-cover", " spanish-language"]},
-                {"name": "The Lightning Thief", "description": "Rick Riordan's start to Percy Jackson's journey.", "price": "$15", "categories": ["young-adult", " paper-back", " english-language"]},
-                {"name": "Beloved", "description": "Nobel prize winner Toni Morrison's seminal work.", "price": "$18", "categories": ["classics", " paper-back", " english-language"]}
+                {"name": "Jane Eyre", "description": "Charlotte Brontë's classic debut novel.", "price": "$18", "categories": ["Classics", " Hard-cover", " English-language"]},
+                {"name": "Anna Karenina", "description": "Tolstoy's most famous work.", "price": "$20", "categories": ["Classics", " Hard-cover", " Russian-language"]},
+                {"name": "The Hunger Games", "description": "Suzanne Collins' flagship series.", "price": "$16", "categories": ["Young-Adult", " Paperback", " English-language"]},
+                {"name": "The Very Hungry Caterpillar", "description": "Beloved children's picture book.", "price": "$12", "categories": ["Children", " Hard-cover", " English-language"]},
+                {"name": "1984", "description": "George Orwell's image of a dystopian world.", "price": "$17", "categories": ["Classics", " Paperback", " English-language"]},
+                {"name": "The Little Prince", "description": "A classic French children's book.", "price": "$11", "categories": ["Children", " Hard-cover", " French-language"]},
+                {"name": "Madame Bovary", "description": "Flaubert's controversial break out novel.", "price": "$20", "categories": ["Classics", " Paperback", " French-language"]},
+                {"name": "Don Quijote", "description": "Cervantes' most acclaimed work.", "price": "$22", "categories": ["Classics", " Hard-cover", " Spanish-language"]},
+                {"name": "The Lightning Thief", "description": "Rick Riordan's start to Percy Jackson's journey.", "price": "$15", "categories": ["Young-Adult", " Paperback", " English-language"]},
+                {"name": "Beloved", "description": "Nobel prize winner Toni Morrison's seminal work.", "price": "$18", "categories": ["Classics", " Paperback", " English-language"]}
             ]
 }
