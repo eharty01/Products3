@@ -73,10 +73,6 @@ body img {
 #selectFilter {
   height: 30px;
   width: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
   border-radius: 7px;
 }
 
